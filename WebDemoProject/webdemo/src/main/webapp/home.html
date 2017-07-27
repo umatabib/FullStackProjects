@@ -1,0 +1,35 @@
+
+<div>
+	<div ng-controller="MyCrtl1">
+
+		<p>Result of RESTful service is: {{firstName}}</p>
+
+
+		<table class="table">
+			<tr>
+				<th>ID</th>
+				<th>FirstName</th>
+				<th>LastName</th>
+			</tr>
+			<tr ng-repeat="x in allUsers">
+				<td><button type="button" class="btn btn-link"
+						ng-click="onClick(x.id)">{{x.id}}</button></td>
+				<td>{{x.firstName}}</td>
+				<td>{{x.lastName}}</td>
+			</tr>
+		</table>
+
+		<div>
+			<div class="form-group">
+				<label for="fname">First Name:</label> <input type="text"
+					class="form-control" id="fname" ng-model="fname">
+			</div>
+			<div class="form-group">
+				<label for="lname">LastName:</label> <input type="text"
+					class="form-control" id="lname" ng-model="lname">
+			</div>
+
+
+		</div>
+	</div>
+</div>
